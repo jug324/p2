@@ -1,3 +1,4 @@
+<?php error_reporting(-1) ; ini_set ("display_errors", 1) ; ?>
 <!doctype html>
 <html>
 <head>
@@ -11,7 +12,7 @@
 <h3>Use the tool below to generate a random password comprised of multiple words</h3>
 <form action="index.php" method="GET">
 <p>Number of words to use:
-<select name="wordcount">
+<select name="wordcount" value="3">
 <option>3</option>
 <option>4</option>
 <option>5</option>
@@ -23,7 +24,8 @@
 <p>Should the first letter be capitalized?   Yes<input type="checkbox" name="uppercase" value="include"></p>
 <div><input type="submit" value="Create Password"></div>
 </form>
-<p>PASSWORD GOES HERE</p>
+<p><?php foreach ($password as $value)
+    echo $value;?></p>
 
 <div><p>This password generator is inspired by the comic XKCD. I hope it serves you well.</p><img src="http://imgs.xkcd.com/comics/password_strength.png" /><p><a href="http://xkcd.com/936/">XKCD comic by Randall Monroe</a></p></div>
 </body>
