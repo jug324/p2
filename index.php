@@ -1,4 +1,3 @@
-<?php error_reporting(-1) ; ini_set ("display_errors", 1) ; ?>
 <!doctype html>
 <html>
 <head>
@@ -17,12 +16,12 @@
 <form action="index.php" method="GET">
 <p>Number of words to use:
 <select name="wordcount">
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
+<option value="2" <?php if(isset($_GET['wordcount']) && ($_GET['wordcount'] == 2)) echo 'selected';?>>2</option>
+<option value="3" <?php if(isset($_GET['wordcount']) && ($_GET['wordcount'] == 3)) echo 'selected';?>>3</option>
+<option value="4" <?php if(isset($_GET['wordcount']) && ($_GET['wordcount'] == 4)) echo 'selected';?>>4</option>
+<option value="5" <?php if(isset($_GET['wordcount']) && ($_GET['wordcount'] == 5)) echo 'selected';?>>5</option>
+<option value="6" <?php if(isset($_GET['wordcount']) && ($_GET['wordcount'] == 6)) echo 'selected';?>>6</option>
+<option value="7" <?php if(isset($_GET['wordcount']) && ($_GET['wordcount'] == 7)) echo 'selected';?>>7</option>
 </select></p>
 <p>Should it include a number?   Yes<input type="checkbox" name="number" value="include" <?php echo $number_check ; ?> ></p>
 <p>Should it include a symbol?   Yes<input type="checkbox" name="symbol" value="include" <?php echo $symbol_check ; ?> ></p>

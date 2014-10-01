@@ -16,3 +16,5 @@ else {$number_check = '';}
 if(isset($_GET['symbol']) && ($_GET['symbol'] === 'include')) {$symbol_check = 'checked="checked"' ;}
 else {$symbol_check = '';}
 
+if(isset($_GET['wordcount']) && ($_GET['wordcount'] >= 2 && $_GET['wordcount'] <=7)) {$startnumber = 'selected';}
+else{ $startnumber ='';}
