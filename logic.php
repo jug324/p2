@@ -1,8 +1,6 @@
 <?php
-
-
-if(isset($_GET['wordcount']) && ($_GET['wordcount'] === '3' OR '4' OR'5' OR'6' OR'7')) {$wordnumber = $_GET['wordcount'];}
-else{ $wordnumber ='3';}
+if(isset($_GET['wordcount']) && ($_GET['wordcount'] >= 2 && $_GET['wordcount'] <=7)) {$wordnumber = $_GET['wordcount'];}
+else { $wordnumber ='2';}
 
 $password = array_rand($wordbank, $wordnumber); 
 
@@ -11,3 +9,10 @@ else{ $number ='';}
 
 if(isset($_GET['symbol']) && ($_GET['symbol'] === 'include')) {$symbol = array_rand($symbolbank, 1);}
 else{ $symbol ='';}
+
+if(isset($_GET['number']) && ($_GET['number'] === 'include')) {$number_check = 'checked="checked"' ;}
+else {$number_check = '';}
+
+if(isset($_GET['symbol']) && ($_GET['symbol'] === 'include')) {$symbol_check = 'checked="checked"' ;}
+else {$symbol_check = '';}
+

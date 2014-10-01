@@ -4,10 +4,10 @@
 #container {width:700px; margin: 0 auto;}
 h1 {text-align:center; font-size:34px;}
 h3 {text-align:center;}
-.xkcd {border:thick solid #000;}
+.xkcd {border:thick solid #000; width:680px;}
 .password {float:right; font-size:large; font-weight:bold;}
 .password p{margin:0em;}
-.passwordbox{border:thick solid #FFF; padding:1em; width:400px; text-align:center; margin-top:0em; }
+.passwordbox{border:thick solid #FFF; padding:1em; width:400px; text-align:center; margin-top:0em; color: #ff6600;}
 
 /* Colors */
 body {background-color: #333;}

@@ -16,19 +16,22 @@
     echo $value;?><?php echo $symbol.$number ?></p></div>
 <form action="index.php" method="GET">
 <p>Number of words to use:
-<select name="wordcount" >
-<option>3</option>
-<option>4</option>
-<option>5</option>
-<option>6</option>
-<option>7</option>
+<select name="wordcount">
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
 </select></p>
-<p>Should it include a number?   Yes<input type="checkbox" name="number" value="include"></p>
-<p>Should it include a symbol?   Yes<input type="checkbox" name="symbol" value="include"></p>
+<p>Should it include a number?   Yes<input type="checkbox" name="number" value="include" <?php echo $number_check ; ?> ></p>
+<p>Should it include a symbol?   Yes<input type="checkbox" name="symbol" value="include" <?php echo $symbol_check ; ?> ></p>
 <div><input type="submit" value="Create Password"></div>
 </form>
+
 <br>
+<hr>
 <br>
-<div><p>This password generator is inspired by the comic XKCD. I hope it serves you well.</p><img src="http://imgs.xkcd.com/comics/password_strength.png" class="xkcd" /><p><a href="http://xkcd.com/936/">XKCD comic by Randall Munroe</a></p></div>
+<div><p>This password generator is inspired by the comic XKCD. I hope it serves you well.</p><img src="http://imgs.xkcd.com/comics/password_strength.png" class="xkcd" alt="Password Strength" /><p><a href="http://xkcd.com/936/">XKCD comic by Randall Munroe</a></p></div>
 </body>
 </html>
